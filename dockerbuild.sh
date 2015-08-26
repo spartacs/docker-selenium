@@ -1,3 +1,3 @@
 #!/bin/bash
 export VERSION=$TAG
-make standalone_chrome
+make standalone_debug_chrome

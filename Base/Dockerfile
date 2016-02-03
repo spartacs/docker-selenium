@@ -7,6 +7,9 @@ MAINTAINER Selenium <selenium-developers@googlegroups.com>
 RUN  echo "deb http://archive.ubuntu.com/ubuntu trusty main universe\n" > /etc/apt/sources.list \
   && echo "deb http://archive.ubuntu.com/ubuntu trusty-updates main universe\n" >> /etc/apt/sources.list
 
+RUN sed -i 's#/archive.ubuntu.com#/il.archive.ubuntu.com#g' /etc/apt/sources.list
+RUN apt-get clean
+
 #========================
 # Miscellaneous packages
 # Includes minimal runtime used for executing non GUI Java programs
